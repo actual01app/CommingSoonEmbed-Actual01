@@ -1,38 +1,297 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;
+  /* outline: 1px dotted red; */
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+#page-region {
+  background-color: red;
+}
+
 .App {
+  font-family: "Poppins", sans-serif;
   text-align: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color: #000023;
+  color: white;
+  cursor: none;
+
+  display: flex;
+  justify-content: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.animateText {
+  font-weight: 900;
+  text-transform: uppercase;
+  padding-left: 5px;
+  color: rgb(3, 3, 3);
+  background-size: 100%;
+  width: fit-content;
+  background: linear-gradient(
+    -45deg,
+    #09f1b8,
+    #00a2ff,
+    #00a2ff,
+    #ff00d2,
+    #fed90f,
+    #d8bc19,
+    #ee7752,
+    #e73c7e,
+    #ff00d2,
+    #00a2ff,
+    #09f1b8
+  );
+  background-size: 400% 400%;
+  animation: gradient 8s ease infinite;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.AppContainer {
+  /* display: flex; */
+  /* align-items: center; */
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+#MainBox {
+  /* display: grid;
+  grid-template-columns: 40% 58.5%;
+  grid-template-rows: 100%; */
+  /* height: 80%; */
+  /* width: 95vw; */
+  width: 98%;
+  padding: 10px;
+  margin: 8px;
+  max-height: 100%;
+  overflow: scroll;
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+
+.MainBoxItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#AboutActual01 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-color: yellow; */
+}
+
+#AboutActual01 div {
+  /* background-color: white; */
+  /* color: black; */
+  /* max-width: 23rem; */
+  width: 98%;
+  padding: 10px;
+  margin: 8px;
+  /* margin-top: 10px; */
+  /* margin-bottom: 10px; */
+  border-radius: 0.25rem;
+  max-height: 100%;
+  overflow: scroll;
+  /* text-align: justify; */
+}
+
+#Actual01Heading {
+  font-size: 2rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 900;
+  /* margin-bottom: 20px; */
+  display: block;
+  width: 100%;
+}
+
+hr {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: white;
+  width: 100%;
+}
+
+/* #Actual01HeadingAndWaitList {
+  max-height: 100%;
+  overflow: scroll;
+} */
+
+#EmailWaitList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#EmailWaitListForm {
+  display: flex;
+  border-radius: 0.25rem;
+
+  --start-color: #00c9ff;
+  --end-color: #21d14e;
+  background: linear-gradient(140deg, var(--start-color), var(--end-color));
+  max-width: 24rem;
+  height: 3rem;
+  margin: 0px;
+  padding: 2px;
+}
+
+#EmailWaitListForm input {
+  cursor: none;
+  border: none;
+  padding: 5px;
+  border-radius: 0.25rem 0px 0px 0.25rem;
+  background-color: black;
+  text-align: left;
+
+  border: none;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  padding: 0;
+  line-height: inherit;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
   color: white;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background-color: black;
+  border-radius: 0.25rem;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  width: 100%;
+  height: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+#EmailWaitListForm button {
+  cursor: none;
+  border: none;
+  padding: 5px;
+  background: transparent;
+  padding: 0;
+  border: none;
+  color: white;
+  text-transform: none;
+  background-color: transparent;
+  background-image: none;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  letter-spacing: 0.025em;
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  align-items: center;
+  height: 100%;
+  display: flex;
+  -webkit-appearance: button;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#SubscribeMessage {
+  /* display: none; */
+  margin-top: 2px;
+  opacity: 0;
+  /* text-align: left; */
+  width: 100%;
+  text-decoration: underline;
+  /* background-color: red; */
+  border-radius: 5px;
+  width: fit-content;
+  padding: 5px;
+  padding-top: 0px;
+}
+
+#SubscribeDescription {
+  font-weight: bold;
+  color: wheat;
+  width: 100%;
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+
+#Contact {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: left;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-column-gap: 10px;
+  /* background-color: red; */
+  border-radius: 5px;
+  --end-color: #00c9ff;
+  --start-color: #00ce00;
+  /* background: linear-gradient(-200deg, var(--start-color), var(--end-color)); */
+  /* color: black; */
+}
+
+#Contact span {
+  display: flex;
+  align-items: center;
+}
+
+#Contact p {
+  display: flex;
+  align-items: center;
+}
+
+.FloatingCalButton {
+  background-color: rgb(1, 120, 255);
+  color: #fff;
+  font-weight: bold;
+  /* position: fixed; */
+  /* bottom: 5px; */
+  /* right: 5px; */
+  border-radius: 10px;
+  text-align: center;
+  border: none;
+  outline: none;
+  /* padding: 12px 20px; */
+  padding: 12px;
+  border-radius: 999px;
+  width: fit-content;
+  transition: 300ms;
+  /* margin-top: 5px; */
+}
+
+.FloatingCalButton:hover {
+  background-color: rgb(0, 130, 255);
+}
+
+.blue-text {
+  color: #b59efd;
 }
