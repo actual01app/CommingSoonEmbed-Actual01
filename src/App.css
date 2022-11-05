@@ -220,6 +220,15 @@ hr {
   -webkit-appearance: button;
 }
 
+@media only screen and (max-width: 700px) {
+  #EmailWaitListForm input {
+    cursor: text;
+  }
+  #EmailWaitListForm button {
+    cursor: pointer;
+  }
+}
+
 #SubscribeMessage {
   /* display: none; */
   margin-top: 2px;

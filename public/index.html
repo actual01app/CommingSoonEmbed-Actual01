@@ -29,6 +29,7 @@
       }
 
       .cursor {
+        display: block;
         z-index: 999;
         position: fixed;
         background: #63beff;
@@ -60,6 +61,20 @@
         opacity: 0.02;
         transform: translate(-30%, -30%);
         border-radius: 50%;
+      }
+
+      @media only screen and (max-width: 700px) {
+        * {
+          cursor: default;
+        }
+        body {
+          cursor: default;
+        }
+
+        .cursor {
+          display: none;
+          opacity: 0;
+        }
       }
     </style>
   </head>
