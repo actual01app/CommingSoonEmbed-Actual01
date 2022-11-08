@@ -78,7 +78,7 @@ function App() {
             <h1 id="Actual01Heading">
               <span class="animateText">@Actual </span>01 .xyz
               <hr />
-              Comming
+              Coming
               <span class="animateText"> Soon </span>
             </h1>
             <div className="MainBoxItem" id="AboutActual01 ">
